@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["packages/ui/src/*"],
+      "@ui": ["packages/ui/src/"],
+      "@backend/*": ["apps/backend/*"],
+      "@core/*": ["packages/core/src/*"],
+      "@db": ["./packages/db/index.ts"],
+      "@db/queries/*": ["./packages/db/queries/*"],
+      "@functions/*": ["packages/functions/src/*"],
+
+      "@shared/*": ["packages/shared/*"],
+      "@shared/type": ["packages/shared/types"],
+
+      "@stacks/backend/*": ["apps/backend/stacks/*"],
+      "@stacks/web/*": ["apps/web/stacks/*"],
+
+      "@web/components/*": ["apps/web/src/components/*"],
+      "@web/providers": ["apps/web/src/providers"],
+      "@web/styles": ["apps/web/src/styles"],
+      "@web/utils": ["apps/web/src/utils"],
+      "@web/hooks/*": ["apps/web/src/hooks/*"],
+      "@web/types": ["apps/web/src/types"],
+      "@web/assets/*": ["apps/web/src/assets/*"],
+
+      "@website/components/*": ["apps/website/src/components/*"],
+      "@website/providers": ["apps/website/src/providers"],
+      "@website/styles": ["apps/website/src/styles"],
+      "@website/utils": ["apps/website/src/utils"],
+      "@website/hooks/*": ["apps/website/src/hooks/*"],
+      "@website/types": ["apps/website/src/types"],
+      "@website/images/*": ["apps/website/src/images/*"],
+
+      "@logger": ["packages/logger/index.ts"]
+    }
+  }
+}

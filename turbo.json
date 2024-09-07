@@ -8,6 +8,7 @@
     },
     "lint": {},
     "type-check": {},
+    "format": {},
     "dev": {
       "cache": false,
       "persistent": true
