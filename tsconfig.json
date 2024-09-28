@@ -20,7 +20,13 @@
       "@repo/typescript-config": ["packages/config-typescript"],
       "@repo/typescript-config/*": ["packages/config-typescript/*"],
       "@repo/tailwind-config": ["packages/config-tailwind"],
-      "@repo/tailwind-config/*": ["packages/config-tailwind/*"]
+      "@repo/tailwind-config/*": ["packages/config-tailwind/*"],
+      "@web/components": ["apps/web/src/app/components"],
+      "@web/components/*": ["apps/web/src/app/components/*"],
+      "@web/lib": ["apps/web/src/lib"],
+      "@web/lib/*": ["apps/web/src/lib/*"],
+      "@web/context": ["apps/web/src/context"],
+      "@web/context/*": ["apps/web/src/context/*"]
     }
   }
 }

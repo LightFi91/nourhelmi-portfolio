@@ -1,6 +1,6 @@
-const { resolve } = require("node:path");
+const { resolve } = require("node:path")
 
-const project = resolve(process.cwd(), "tsconfig.json");
+const project = resolve(process.cwd(), "tsconfig.json")
 
 /*
  * This is a custom ESLint configuration for use a library
@@ -33,10 +33,15 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
+  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.json", "**/*.css"],
+  // add rules configurations here
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",
+    "eslint-comments/require-description": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/button-has-type": "off",
   },
   overrides: [
     {
@@ -46,4 +51,4 @@ module.exports = {
       },
     },
   ],
-};
+}
