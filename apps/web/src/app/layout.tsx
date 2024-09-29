@@ -36,7 +36,7 @@ export default function RootLayout({
       </head>
       <ThemeContextProvider>
         <ActiveSectionContextProvider>
-          <body className="relative flex flex-col min-h-screen">
+          <body className="relative flex flex-col min-h-screen scroll-smooth">
             <RootContent>{children}</RootContent>
           </body>
         </ActiveSectionContextProvider>

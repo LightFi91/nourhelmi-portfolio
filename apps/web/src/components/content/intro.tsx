@@ -10,7 +10,7 @@ export function Intro() {
 
   return (
     <section
-      className="mt-64 z-content flex flex-col items-center justify-center"
+      className="tw-h-full flex items-start justify-center z-content mt-24"
       id="home"
       ref={ref}
     >
@@ -38,7 +38,7 @@ export function Intro() {
           damping: 15,
           delay: 0.5,
         }}
-        className="fixed [perspective:800px] [transform-style:preserve-3d] flex flex-col justify-center items-center gap-4"
+        className="[perspective:800px] [transform-style:preserve-3d] flex flex-col justify-center items-center gap-4"
       >
         <div className="flex flex-col justify-center items-center gap-4">
           <BackgroundGradient containerClassName="w-36 h-36 rounded-full corner-glow overflow-hidden">
