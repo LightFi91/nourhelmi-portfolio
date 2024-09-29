@@ -1,4 +1,19 @@
 import type { Config } from "tailwindcss"
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette")
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  )
+
+  addBase({
+    ":root": newVars,
+  })
+}
 
 const cornerGlow = ({
   addUtilities,
@@ -79,6 +94,11 @@ const config: Omit<Config, "content" | "plugins"> = {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
       },
+      zIndex: {
+        background: "-1",
+        content: "20",
+        header: "99",
+      },
       keyframes: {
         moveHorizontal: {
           "0%": {
@@ -116,7 +136,7 @@ const config: Omit<Config, "content" | "plugins"> = {
       },
     },
   },
-  plugins: [cornerGlow],
+  plugins: [cornerGlow, addVariablesForColors],
 }
 
 export default config

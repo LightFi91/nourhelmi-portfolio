@@ -7,11 +7,10 @@ export function Background() {
   const { theme } = useTheme()
 
   return (
-    <div className="fixed inset-0 z-[-1]">
-      <BackgroundGradientAnimation
-        containerClassName="absolute inset-0"
-        theme={theme}
-      />
-    </div>
+    <BackgroundGradientAnimation
+      containerClassName="fixed inset-0"
+      className="z-background"
+      theme={theme}
+    />
   )
 }
