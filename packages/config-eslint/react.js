@@ -42,6 +42,9 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "react-hooks/exhaustive-deps": "off",
     "react/button-has-type": "off",
+    "unicorn/filename-case": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
   },
   overrides: [
     {

@@ -20,6 +20,20 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html className="!scroll-smooth" lang="en">
+      <head>
+        <style>{`
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          ::-webkit-scrollbar {
+            display: none;
+          }
+
+          /* Hide scrollbar for IE, Edge and Firefox */
+          html {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+          }
+        `}</style>
+      </head>
       <ThemeContextProvider>
         <ActiveSectionContextProvider>
           <body className="relative flex flex-col min-h-screen">

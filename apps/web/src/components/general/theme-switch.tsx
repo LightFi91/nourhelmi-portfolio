@@ -12,7 +12,7 @@ export default function ThemeSwitch() {
       onClick={toggleTheme}
     >
       {theme === "light" ? (
-        <TbMoonStars />
+        <TbMoonStars className="text-white" />
       ) : (
         <TbSunHigh className="text-gray-950" />
       )}
