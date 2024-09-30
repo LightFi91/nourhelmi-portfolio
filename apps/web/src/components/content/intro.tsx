@@ -10,7 +10,7 @@ export function Intro() {
 
   return (
     <section
-      className="tw-h-full flex items-start justify-center z-content mt-24"
+      className="tw-h-full flex items-start justify-center z-content mt-36"
       id="home"
       ref={ref}
     >
