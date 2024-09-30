@@ -59,11 +59,11 @@ export function Intro() {
           </div>
         </div>
         <div className="flex-col justify-center items-center max-w-2xl">
-          <p className="text-2xl text-text-light dark:text-text-dark text-center">
-            I am a software engineer with 15 years of experience spanning across
-            all the different technologies and tech stacks, management and
-            leadership, mentorship and mroe
-          </p>
+          <h3 className="text-3xl text-text-light dark:text-text-dark text-center">
+            Product centric, experience focused, technology agnostic software
+            engineer. I build products people love, and scale startups and
+            teams.
+          </h3>
         </div>
       </motion.div>
     </section>
