@@ -15,22 +15,23 @@ export function Intro() {
       ref={ref}
     >
       <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0.5,
-          rotateX: 40,
-          y: 40,
-        }}
         animate={{
           opacity: 1,
           scale: 1,
           rotateX: 0,
           y: 0,
         }}
+        className="[perspective:800px] [transform-style:preserve-3d] flex flex-col justify-center items-center gap-4"
         exit={{
           opacity: 0,
           scale: 0.8,
           rotateX: 10,
+        }}
+        initial={{
+          opacity: 0,
+          scale: 0.5,
+          rotateX: 40,
+          y: 40,
         }}
         transition={{
           type: "spring",
@@ -38,28 +39,27 @@ export function Intro() {
           damping: 15,
           delay: 0.5,
         }}
-        className="[perspective:800px] [transform-style:preserve-3d] flex flex-col justify-center items-center gap-4"
       >
         <div className="flex flex-col justify-center items-center gap-4">
           <BackgroundGradient containerClassName="w-36 h-36 rounded-full corner-glow overflow-hidden">
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image
-                src="/me.jpeg"
                 alt="Nour helmi photo"
-                width={140}
-                height={140}
                 className="object-cover"
+                height={140}
+                src="/me.jpeg"
+                width={140}
               />
             </div>
           </BackgroundGradient>
           <div className="">
-            <h2 className="text-5xl font-serif text-text-light dark:text-text-dark">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-text-light dark:text-text-dark">
               Nour Helmi
             </h2>
           </div>
         </div>
-        <div className="flex-col justify-center items-center max-w-2xl">
-          <h3 className="text-3xl text-text-light dark:text-text-dark text-center">
+        <div className="flex-col justify-center items-center max-w-4xl mx-12">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-text-light dark:text-text-dark text-center">
             Product centric, experience focused, technology agnostic software
             engineer. I build products people love, and scale startups and
             teams.
