@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import animate from "tailwindcss-animate"
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette")
@@ -136,7 +137,7 @@ const config: Omit<Config, "content" | "plugins"> = {
       },
     },
   },
-  plugins: [cornerGlow, addVariablesForColors],
+  plugins: [cornerGlow, addVariablesForColors, animate],
 }
 
 export default config

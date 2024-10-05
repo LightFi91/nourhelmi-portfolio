@@ -1,9 +1,10 @@
 "use client"
 
-import { BackgroundGradient } from "@repo/ui/background-gradient"
+import { BackgroundGradient, GlowingButton } from "@repo/ui"
 import { motion } from "framer-motion"
 import { useSectionInView } from "hooks/useSectionView"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Intro() {
   const { ref } = useSectionInView("Home", 0.5)
@@ -52,7 +53,7 @@ export function Intro() {
               />
             </div>
           </BackgroundGradient>
-          <div className="">
+          <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-text-light dark:text-text-dark">
               Nour Helmi
             </h2>
@@ -65,6 +66,9 @@ export function Intro() {
             teams.
           </h3>
         </div>
+        <GlowingButton>
+          <Link href="#skills">View Skills</Link>
+        </GlowingButton>
       </motion.div>
     </section>
   )

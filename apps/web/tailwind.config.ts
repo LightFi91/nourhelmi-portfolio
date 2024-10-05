@@ -8,6 +8,7 @@ const config: Pick<Config, "content" | "presets"> = {
     "./src/components/**/*.tsx",
     "./src/lib/**/*.tsx",
     "./src/context/**/*.tsx",
+    "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [sharedConfig],
 }

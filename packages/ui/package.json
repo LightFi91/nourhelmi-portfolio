@@ -8,10 +8,8 @@
     "dist"
   ],
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx",
-    "./background-gradient-animation": "./src/components/background-gradient-animation.tsx",
-    "./background-gradient": "./src/components/background-gradient.tsx"
+    ".": "./src/index.ts",
+    "./styles.css": "./dist/index.css"
   },
   "license": "MIT",
   "scripts": {
