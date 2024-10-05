@@ -14,7 +14,7 @@ export function GlowingButton({
   return (
     <motion.button
       className={cn(
-        "relative px-6 py-2 bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark font-medium rounded-full text-sm shadow-md",
+        "relative px-12 py-3 bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark font-medium rounded-full text-sm shadow-md",
         className
       )}
       initial="initial"
@@ -22,7 +22,7 @@ export function GlowingButton({
     >
       {children}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-dark dark:via-primary-light to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-dark dark:via-accent-light to-transparent"
         style={{
           left: "50%",
           transform: "translateX(-50%)",
