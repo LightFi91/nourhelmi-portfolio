@@ -5,6 +5,12 @@ import { motion } from "framer-motion"
 import { useSectionInView } from "hooks/useSectionView"
 import Image from "next/image"
 import Link from "next/link"
+import {
+  TbBrandGithub,
+  TbBrandLinkedin,
+  TbFileDownload,
+  TbMail,
+} from "react-icons/tb"
 
 export function Intro() {
   const { ref } = useSectionInView("Home", 0.5)
@@ -66,9 +72,24 @@ export function Intro() {
             teams.
           </h3>
         </div>
-        <GlowingButton>
-          <Link href="#skills">View Skills</Link>
-        </GlowingButton>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+          <GlowingButton className="flex justify-center items-center gap-2">
+            <TbMail size={20} />
+            <Link href="#contact">Contact me</Link>
+          </GlowingButton>
+          <GlowingButton className="flex justify-center items-center gap-2">
+            <TbFileDownload size={20} />
+            <span>Download CV</span>
+          </GlowingButton>
+          <div className="flex gap-4">
+            <GlowingButton aria-label="LinkedIn Profile" size="icon">
+              <TbBrandLinkedin size={24} />
+            </GlowingButton>
+            <GlowingButton aria-label="GitHub Profile" size="icon">
+              <TbBrandGithub size={24} />
+            </GlowingButton>
+          </div>
+        </div>
       </motion.div>
     </section>
   )
