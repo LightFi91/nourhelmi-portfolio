@@ -53,7 +53,7 @@ export function GlowingButton({
     >
       {children}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary-dark dark:via-accent-light to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-surface-dark dark:via-accent-light to-transparent"
         style={{
           left: "50%",
           transform: "translateX(-50%)",
