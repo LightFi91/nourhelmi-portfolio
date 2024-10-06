@@ -31,7 +31,7 @@ export function Intro() {
         className="[perspective:800px] [transform-style:preserve-3d] flex flex-col justify-center items-center gap-4"
         exit={{
           opacity: 0,
-          scale: 0.8,
+          scale: 0.5,
           rotateX: 10,
         }}
         initial={{
@@ -66,13 +66,13 @@ export function Intro() {
           </div>
         </div>
         <div className="flex-col justify-center items-center max-w-2xl mx-12">
-          <h3 className="text-2xl md:text-3xl lg:text-4xl text-text-light dark:text-text-dark text-center">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-text-light dark:text-text-dark text-center font-semibold font-mono">
             Product centric, experience focused, technology agnostic software
             engineer. I build products people love, and scale startups and
             teams.
           </h3>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
           <GlowingButton className="flex justify-center items-center gap-2">
             <TbMail size={20} />
             <Link href="#contact">Contact me</Link>

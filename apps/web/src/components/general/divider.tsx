@@ -5,7 +5,7 @@ interface DividerProps {
 export function Divider({ className = "" }: DividerProps) {
   return (
     <div
-      className={`w-full h-px my-4 bg-gradient-to-r from-transparent via-surface-dark dark:via-accent-light to-transparent z-content ${className}`}
+      className={`min-h-20 max-h-80 w-1 my-4 bg-surface-dark dark:bg-accent-light z-content rounded-full ${className}`}
     />
   )
 }
