@@ -1,10 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useSectionInView } from "hooks/useSectionView"
 
 export function About() {
+  const { ref } = useSectionInView("About", 0.5)
+
   return (
-    <section className="flex items-center justify-center z-content max-w-5xl mx-auto mt-12">
+    <section
+      className="flex items-center justify-center z-content max-w-5xl mx-auto mt-12"
+      id="about"
+      ref={ref}
+    >
       <motion.p
         animate={{
           opacity: 1,
@@ -12,7 +19,7 @@ export function About() {
           rotateX: 0,
           y: 0,
         }}
-        className="text-text-light dark:text-text-dark text-center text-lg"
+        className="text-text-light dark:text-text-dark font-medium text-center text-xl"
         initial={{
           opacity: 0,
           scale: 0.5,

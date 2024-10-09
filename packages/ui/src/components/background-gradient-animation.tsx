@@ -48,12 +48,12 @@ export function BackgroundGradientAnimation({
 
     document.body.style.setProperty(
       "--gradient-background-start",
-      isDarkMode ? "rgb(17, 24, 39)" : `rgb(${gradientBackgroundStart})` // background.dark : background.light
-    )
+      isDarkMode ? "rgb(17, 24, 39)" : `rgb(${gradientBackgroundStart})`
+    ) // background.dark : background.light
     document.body.style.setProperty(
       "--gradient-background-end",
-      isDarkMode ? "rgb(30, 41, 59)" : `rgb(${gradientBackgroundEnd})` // surface.dark : surface.light
-    )
+      isDarkMode ? "rgb(30, 41, 59)" : `rgb(${gradientBackgroundEnd})`
+    ) // surface.dark : surface.light
     document.body.style.setProperty(
       "--first-color",
       isDarkMode ? "59, 130, 246" : firstColor
@@ -97,13 +97,25 @@ export function BackgroundGradientAnimation({
     move()
   }, [tgX, tgY])
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (interactiveRef.current) {
-      const rect = interactiveRef.current.getBoundingClientRect()
-      setTgX(event.clientX - rect.left)
-      setTgY(event.clientY - rect.top)
+  useEffect(() => {
+    function handleGlobalMouseMove(event: MouseEvent) {
+      if (interactiveRef.current) {
+        const rect = interactiveRef.current.getBoundingClientRect()
+        setTgX(event.clientX - rect.left)
+        setTgY(event.clientY - rect.top)
+      }
     }
-  }
+
+    if (interactive) {
+      window.addEventListener("mousemove", handleGlobalMouseMove)
+    }
+
+    return () => {
+      if (interactive) {
+        window.removeEventListener("mousemove", handleGlobalMouseMove)
+      }
+    }
+  }, [interactive])
 
   useEffect(() => {
     // eslint-disable-next-line prefer-named-capture-group
@@ -195,7 +207,6 @@ export function BackgroundGradientAnimation({
               `[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2`,
               `opacity-70`
             )}
-            onMouseMove={handleMouseMove}
             ref={interactiveRef}
           />
         ) : null}

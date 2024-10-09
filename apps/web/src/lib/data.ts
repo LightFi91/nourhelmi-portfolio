@@ -84,24 +84,92 @@ export const links = [
 //   },
 // ] as const
 
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+type SkillCategory = {
+  [key: string]: {
+    [subCategory: string]: string[]
+  }
+}
+
+export const skillsData: SkillCategory[] = [
+  {
+    web: {
+      frameworks: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+      design: [
+        "Tailwind",
+        "Chakra UI",
+        "Material UI",
+        "Shadcn",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+    },
+  },
+  {
+    mobile: {
+      native: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+      hybrid: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+    },
+  },
+  {
+    infra: {
+      backend: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+      cloud: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+    },
+  },
+  {
+    web3: {
+      frameworks: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+      ],
+    },
+  },
 ] as const

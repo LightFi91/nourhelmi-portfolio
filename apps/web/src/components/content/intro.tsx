@@ -66,7 +66,7 @@ export function Intro() {
           </div>
         </div>
         <div className="flex-col justify-center items-center max-w-2xl mx-12">
-          <h3 className="text-2xl md:text-3xl lg:text-4xl text-text-light dark:text-text-dark text-center font-semibold font-mono">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl text-text-light dark:text-text-dark text-center font-bold font-mono">
             Product centric, experience focused, technology agnostic software
             engineer. I build products people love, and scale startups and
             teams.
