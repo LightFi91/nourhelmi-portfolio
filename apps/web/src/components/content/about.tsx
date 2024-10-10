@@ -13,13 +13,13 @@ export function About() {
       ref={ref}
     >
       <motion.p
+        className="text-text-light dark:text-text-dark font-medium text-center text-xl"
         animate={{
           opacity: 1,
           scale: 1,
           rotateX: 0,
           y: 0,
         }}
-        className="text-text-light dark:text-text-dark font-medium text-center text-xl"
         initial={{
           opacity: 0,
           scale: 0.5,

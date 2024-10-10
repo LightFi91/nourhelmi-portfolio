@@ -28,10 +28,30 @@ export function Skills() {
       id="skills"
       ref={ref}
     >
-      <div className="w-full flex flex-wrap justify-center gap-6">
+      <motion.div
+        className="w-full flex flex-wrap justify-center gap-6"
+        animate={{
+          opacity: 1,
+          scale: 1,
+          rotateX: 0,
+          y: 0,
+        }}
+        initial={{
+          opacity: 0,
+          scale: 0.5,
+          rotateX: -10,
+          y: 10,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 15,
+          delay: 0.5,
+        }}
+      >
         <p className="text-2xl text-white text-center max-w-xl font-mono font-bold">
-          These are my full stack skills, hover over each card to see the total
-          years spent on each
+          Below are some skills i accumulated over the years, hover over each
+          card to see the total years spent on each
         </p>
         {skillsData.map((category, index) => {
           const [mainCategory, subCategories] = Object.entries(category)[0] as [
@@ -79,7 +99,7 @@ export function Skills() {
             </div>
           )
         })}
-      </div>
+      </motion.div>
     </section>
   )
 }
