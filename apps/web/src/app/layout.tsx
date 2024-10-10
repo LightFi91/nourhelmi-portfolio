@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-fragments */
+import { Background } from "@/components/common/background"
+import ThemeSwitch from "@/components/common/theme-switch"
 import "@repo/ui/styles.css"
-import { Background } from "components/common/background"
-import ThemeSwitch from "components/common/theme-switch"
 import type { Metadata } from "next"
 import { Fragment } from "react"
 import Footer from "../components/common/footer"

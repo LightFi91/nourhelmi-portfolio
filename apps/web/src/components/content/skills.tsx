@@ -1,8 +1,8 @@
 "use client"
 
+import { useSectionInView } from "@/hooks/useSectionView"
 import { WobbleCard } from "@repo/ui"
 import { motion } from "framer-motion"
-import { useSectionInView } from "hooks/useSectionView"
 import { skillsData } from "../../lib/data"
 
 const fadeInAnimationVariants = {
@@ -49,7 +49,7 @@ export function Skills() {
           delay: 0.5,
         }}
       >
-        <p className="text-2xl text-white text-center max-w-xl font-mono font-bold">
+        <p className="text-2xl text-white text-center max-w-xl font-mono font-bold mb-12">
           Below are some skills i accumulated over the years, hover over each
           card to see the total years spent on each
         </p>

@@ -1,8 +1,8 @@
 "use client"
 
+import { useSectionInView } from "@/hooks/useSectionView"
 import { BackgroundGradient, GlowingButton } from "@repo/ui"
 import { motion } from "framer-motion"
-import { useSectionInView } from "hooks/useSectionView"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -17,7 +17,7 @@ export function Intro() {
 
   return (
     <section
-      className="tw-h-full flex items-start justify-center z-content mt-36"
+      className="tw-h-full flex items-start justify-center z-content mt-36 scroll-mt-36"
       id="home"
       ref={ref}
     >

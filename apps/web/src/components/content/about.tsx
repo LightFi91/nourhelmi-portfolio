@@ -1,14 +1,14 @@
 "use client"
 
+import { useSectionInView } from "@/hooks/useSectionView"
 import { motion } from "framer-motion"
-import { useSectionInView } from "hooks/useSectionView"
 
 export function About() {
   const { ref } = useSectionInView("About", 0.5)
 
   return (
     <section
-      className="flex items-center justify-center z-content max-w-5xl mx-auto mt-12"
+      className="flex items-center justify-center z-content max-w-5xl mx-auto mt-12 scroll-mt-12"
       id="about"
       ref={ref}
     >
