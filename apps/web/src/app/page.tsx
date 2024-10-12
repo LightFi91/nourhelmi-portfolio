@@ -11,11 +11,11 @@ export default function Page(): JSX.Element {
     <Fragment>
       <Intro />
       <About />
-      <Divider className="my-20" />
+      <Divider />
       <Skills />
-      <Divider className="my-20" />
+      <Divider />
       <Projects />
-      <Divider className="my-20" />
+      <Divider />
 
       <section
         className="min-h-screen flex items-center justify-center z-content"
