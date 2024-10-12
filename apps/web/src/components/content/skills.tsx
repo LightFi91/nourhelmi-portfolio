@@ -1,23 +1,9 @@
 "use client"
 
 import { useSectionInView } from "@/hooks/useSectionView"
-import { WobbleCard } from "@repo/ui"
+import { TagList, WobbleCard } from "@repo/ui"
 import { motion } from "framer-motion"
 import { skillsData } from "../../lib/data"
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-}
 
 export function Skills() {
   const { ref } = useSectionInView("Skills", 0.5)
@@ -75,22 +61,7 @@ export function Skills() {
                         <h3 className="text-xl font-mono font-semibold capitalize mb-2">
                           {subCategory}
                         </h3>
-                        <ul className="flex flex-wrap gap-2">
-                          {skills.map((skill, skillIndex) => (
-                            <motion.li
-                              className="bg-gray-200 rounded-full px-3 py-1 text-sm"
-                              variants={fadeInAnimationVariants}
-                              initial="initial"
-                              whileInView="animate"
-                              viewport={{
-                                once: true,
-                              }}
-                              custom={index}
-                            >
-                              {skill}
-                            </motion.li>
-                          ))}
-                        </ul>
+                        <TagList tags={skills} />
                       </div>
                     )
                   )}

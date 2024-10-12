@@ -68,11 +68,11 @@ const config: Omit<Config, "content" | "plugins"> = {
           dark: "#3B82F6", // Same Blue for dark theme
         },
         secondary: {
-          light: "#16A34A", // Balanced Green for light theme
+          light: "#cbd5e1", // Balanced Green for light theme
           dark: "#10B981", // Same Green for dark theme
         },
         background: {
-          light: "#94a3b8", // Pure White for light theme background
+          light: "#e5e7eb", // Pure White for light theme background
           dark: "#111827", // Dark Gray for dark theme background
         },
         surface: {
@@ -137,7 +137,12 @@ const config: Omit<Config, "content" | "plugins"> = {
       },
     },
   },
-  plugins: [cornerGlow, addVariablesForColors, animate],
+  plugins: [
+    cornerGlow,
+    addVariablesForColors,
+    animate,
+    require("tailwindcss-textshadow"),
+  ],
 }
 
 export default config

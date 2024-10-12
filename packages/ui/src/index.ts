@@ -1,5 +1,6 @@
 export * from "./components/background-gradient"
 export * from "./components/background-gradient-animation"
 export * from "./components/glowing-button"
-export * from "./components/moving-border"
+export * from "./components/label"
+export * from "./components/tag-list"
 export * from "./components/wobble-card"
