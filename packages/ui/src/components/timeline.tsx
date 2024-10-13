@@ -1,40 +1,37 @@
-"use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+"use client"
+import { motion, useScroll, useTransform } from "framer-motion"
+import React, { useEffect, useRef, useState } from "react"
 
 interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
+  title: string
+  content: React.ReactNode
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
+  const ref = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
+      const rect = ref.current.getBoundingClientRect()
+      setHeight(rect.height)
     }
-  }, [ref]);
+  }, [ref])
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
-  });
+  })
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height])
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1])
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="bg-background-light/10 dark:bg-white/10
+                border-text-light/[0.1] dark:border-text-dark/[0.1]
+                  max-w-5xl border rounded-lg overflow-hidden "
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -57,7 +54,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-text-light dark:text-text-dark ">
                 {item.title}
               </h3>
             </div>
@@ -86,5 +83,5 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

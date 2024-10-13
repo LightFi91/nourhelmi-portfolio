@@ -1,5 +1,6 @@
 "use client"
 
+import { useSectionInView } from "@/hooks/useSectionView"
 import { Timeline } from "@repo/ui"
 import Image from "next/image"
 
@@ -148,9 +149,16 @@ export function Experience() {
       ),
     },
   ]
+
+  const { ref } = useSectionInView("Experience", 0.5)
+
   return (
-    <div className="w-full">
+    <section
+      id="experience"
+      ref={ref}
+      className="flex flex-col items-center justify-center z-content mx-auto"
+    >
       <Timeline data={data} />
-    </div>
+    </section>
   )
 }

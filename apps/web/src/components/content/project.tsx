@@ -31,7 +31,7 @@ export default function Project({
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <div
-        className="bg-background-light/10 hover:bg-background-light/20 dark:bg-white/10 dark:hover:bg-white/20
+        className="bg-background-light/40 hover:bg-background-light/20 dark:bg-white/10 dark:hover:bg-white/20
                    border-text-light/[0.1] dark:border-text-dark/[0.1]
                     max-w-5xl border rounded-lg overflow-hidden 
                     flex flex-row sm:flex-col gap-6
