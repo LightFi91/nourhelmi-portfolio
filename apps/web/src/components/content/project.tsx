@@ -31,16 +31,18 @@ export default function Project({
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <div
-        className="bg-background-light max-w-5xl border border-text-light/[0.1] rounded-lg overflow-hidden 
+        className="bg-background-light/10 hover:bg-background-light/20 dark:bg-white/10 dark:hover:bg-white/20
+                   border-text-light/[0.1] dark:border-text-dark/[0.1]
+                    max-w-5xl border rounded-lg overflow-hidden 
                     flex flex-row sm:flex-col gap-6
-                    relative sm:pr-8  hover:bg-slate-200 
-                    transition sm:group-even:pl-8 dark:text-text-dark dark:bg-white/10 dark:hover:bg-white/20"
+                    relative sm:pr-8 hover:bg-slate-200 
+                    transition sm:group-even:pl-8 dark:text-text-dark"
       >
         <div
           className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 max-w-[80%] lg:max-w-[70%] md:max-w-[60%] sm:max-w-[50%]
                     flex flex-col gap-2
                     justify-between align-middle
-                    sm:group-even:ml-[18rem] "
+                    sm:group-even:ml-[18rem]"
         >
           <Label variant="title">{title}</Label>
           <Label variant="body">{description}</Label>

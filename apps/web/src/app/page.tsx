@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-fragments */
 import { Divider } from "@/components/common/divider"
 import { About } from "@/components/content/about"
+import { Experience } from "@/components/content/experience"
 import { Intro } from "@/components/content/intro"
 import { Projects } from "@/components/content/projects"
 import { Skills } from "@/components/content/skills"
@@ -16,7 +17,8 @@ export default function Page(): JSX.Element {
       <Divider />
       <Projects />
       <Divider />
-
+      <Experience />
+      <Divider />
       <section
         className="min-h-screen flex items-center justify-center z-content"
         id="contact"

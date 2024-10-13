@@ -45,9 +45,8 @@ export function Skills() {
             Record<string, string[]>,
           ]
           return (
-            <div>
+            <div key={index}>
               <WobbleCard
-                key={index}
                 className="max-w-md p-12"
                 containerClassName="bg-primary-light"
               >

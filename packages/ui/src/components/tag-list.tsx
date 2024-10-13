@@ -1,6 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 import { fadeInAnimationVariants } from "../lib/utils"
 import { Label } from "./label"
 
@@ -9,16 +10,16 @@ type TagListProps = {
 }
 
 export function TagList({ tags }: TagListProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <ul className="flex flex-wrap gap-2">
+    <ul ref={ref} className="flex flex-wrap gap-2">
       {tags.map((tag, index) => (
         <motion.li
           variants={fadeInAnimationVariants()}
           initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
+          animate={isInView ? "animate" : "initial"}
           custom={index}
           className="bg-background-light/[0.7] dark:bg-background-dark/[0.7] px-3 py-1 uppercase tracking-wider rounded-full inline-block"
           key={index}
